@@ -14,18 +14,18 @@ public class Driver {
 	private String nationality;
 	private String url;
 
-	public Driver(int driverId, String driverRef, int number, String code, String forename, String surname,
-			LocalDate dob, String nationality, String url) {
-		super();
+	public Driver(int driverId, String forename, String surname) {
+	
 		this.driverId = driverId;
-		this.driverRef = driverRef;
-		this.number = number;
-		this.code = code;
+		
 		this.forename = forename;
 		this.surname = surname;
-		this.dob = dob;
-		this.nationality = nationality;
-		this.url = url;
+	
+	}
+
+	@Override
+	public String toString() {
+		return String.format("Driver [driverId=%s, forename=%s, surname=%s]\n", driverId, forename, surname);
 	}
 
 	public int getDriverId() {
